@@ -1,103 +1,3 @@
-/* *{
-  margin: 0;
-  box-sizing: border-box;
-  padding: 0;
-  border: 1px solid black;
-}
-
-.header{
-  height: 10vh;
-  position: fixed;
-  width: 100%;
-  background-color: #a92835;
-  border: 1px solid black;
-  font-size: large;
-}
-
-.navbar{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  border: 1px solid black;
-  justify-content: center;
-  align-items: center;
-}
-
-.link-button{
-  display: inline-block;
-  min-width: fit-content;
-  width: 140px;
-  height: 40px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid black;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  text-align: center;
-  line-height: 35px;
-  transition: all 0.3s ease-in-out;
-}
-
-.link-button:hover{
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  border-radius: 50px;
-}
-
-.nav-list .list-item .link-button-list{
-  display: inline-block;
-  min-width: fit-content;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: white;
-  border: 1px solid black;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 35px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-list{
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  list-style: none;
-  height: 100%;
-  margin-right: 50px;
-}
-
-.link-button-list:hover{
-  border: 2px solid #751b25;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  border-radius: 50px;
-}
-
-.nav-list .list-item{
-  width: 140px;
-  height: 40px;
-  margin: 5px;
-  border: 1px solid black;
-}
-
-.nav-list .list-item .link-button-list{
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: white;
-  border: 1px solid black;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 35px;
-  transition: all 0.3s ease-in-out;
-}
-
-main{
-  height: 1000px;
-  border: 1px solid black;
-} */
-
 /* Para quitar todo los estilos por defecto */
 *{
   margin: 0;
@@ -121,8 +21,81 @@ body{
   background-color: #9f3647;
   color: #ffffff;
   height: 10vh;
+  /* Así se mantiene "pegado" al tope de la página, con fixed se desliga del flujo de la página y se complica el uso de la imagen de fondo */
   position: sticky;
   top: 0;
+  /* Que el encabezado siempre se mantega por encima de los elementos de la página*/
   z-index: 10;
 
+  /* aplicado al nav, a todo el contenedor */
+  .navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1.5rem 0;
+
+    /* para el boton con el logo */
+    .anclaLogo{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.2rem;
+
+    }
+
+    .listaNav{
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      .listaItem{
+        margin-right: 20px;
+
+        .linkNav{
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1.1rem;
+          padding: 0.5rem 1rem;
+
+          /* para que haya un pequeño delay cuando aparecen esas transformaciones */
+          transition: transform 0.3s, box-shadow 0.3s;
+
+          /* & se refiere a la misma clase donde está parado*/
+          &:hover{
+            /* el elemento se achica un poco al pasarle por arriba con el mouse */
+            transform: scale(0.95);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+          }
+
+        }
+
+        .linkNav.iniciarSesion{
+          background-color: #181419;
+          color: white;
+          border-radius: 5px;
+
+          transition: transform 0.3s, box-shadow 0.3s;
+          &:hover{
+            background-color: #9f3647;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* Styles mobile y tablet */
+
+@media (max-width: 768px){
+  
 }
