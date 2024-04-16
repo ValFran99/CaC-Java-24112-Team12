@@ -97,5 +97,37 @@ body{
 /* Styles mobile y tablet */
 
 @media (max-width: 768px){
-  
+  .header{
+    /* cuando se cumple la condición del media vuelve a su altura original, 10vh en este caso */
+    height: initial;
+
+    display: flex;
+    justify-content: center;
+    
+    .navegacion{
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+      row-gap: 20px;
+
+      .anclaLogo{
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .listaNav{
+        padding: initial;
+
+        .listaItem{
+          .linkNav{
+            font-weight: 400;
+            margin-right: initial;
+            font-size: 1rem;
+            padding: 0.2rem;
+          }
+        }
+      }
+    }
+
+  }
 }
