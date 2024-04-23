@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito", "sans-serif";
+  /* border: 1px solid black; */
 }
 
 body{
@@ -90,6 +91,66 @@ body{
 
     }
 
+  }
+
+}
+
+.main{
+
+  display: flex;
+  flex-direction: column;
+
+  section{
+    border: 1px solid black;
+  }
+
+
+  .landingSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-image: url("./assets/banner_cinema.jpg");
+    background-size: cover;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6);
+
+    color: #ffffff;
+
+    .tituloPrincipal, .tituloSecundario{
+      /* border: 1px solid  black; */
+      display: inline-block;
+    }
+
+    .tituloPrincipal{
+      font-size: 4.5rem;
+      width: 70vw;
+      text-align: center;
+    }
+    .tituloSecundario{
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    .registerLink{
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      background-color: #9f3647;
+
+      /* para que haya un pequeño delay cuando aparecen esas transformaciones */
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      /* & se refiere a la misma clase donde está parado*/
+      &:hover{
+        /* el elemento se achica un poco al pasarle por arriba con el mouse */
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+    }
   }
 
 }
