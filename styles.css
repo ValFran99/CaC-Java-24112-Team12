@@ -226,10 +226,113 @@
       }
 
     }
+    
+  }
+  
+  .sectionTendencias{
+    display: flex;
+    height: 350vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    .tituloTendencias{
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6);
+    }
 
+    .peliculasContainer{
+      display: flex;
+      height: 310vh;
+      width: 80vw;
+      border: 1px solid white;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      .pelicula{
+        /* border: 1px solid white; */
+        height: 45vh;
+        width: 15vw;
+        transition: transform 0.5s ease-in-out, box-shadow 0.2s ease-in-out;
+        border: 1px solid #181419;
+        border-radius: 10px;
+
+        &:hover{
+          /* el elemento se achica un poco al pasarle por arriba con el mouse */
+          transform: scale(0.9);
+          box-shadow: 0 0 30px rgba(255, 50, 0, 0.7);
+          /* border-radius: 5px; */
+        }
+
+
+        .peliculaLink{
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          
+          .tituloPelicula{
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 20vh;
+            left: 3vw;
+            z-index: 1;
+          }
+
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: filter 0.3s ease-in-out;
+            &:hover{
+              /* el elemento se achica un poco al pasarle por arriba con el mouse */
+              filter: blur(4px);
+              /* border-radius: 5px; */
+            }
+    
+          }
+        }
+
+      }
+    }
+
+    .botonesAntSig{
+      /* border: 1px solid white; */
+      width: 30vw;
+    }
+
+    .botonAnterior, .botonSiguiente{
+      display: inline-block;
+      text-align: center;
+      background-color: #9f3647;
+      color: white;
+      font-size: 1.2rem;
+      border: 2px solid white;
+      margin-left: 3vw;
+      border-radius: 5px;
+
+      width: 10vw;
+      height: 6vh;
+
+      /* para que haya un pequeño delay cuando aparecen esas transformaciones */
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      /* & se refiere a la misma clase donde está parado*/
+      &:hover{
+        /* el elemento se achica un poco al pasarle por arriba con el mouse */
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        /* border-radius: 5px; */
+      }
+    }
   }
 
 }
+
 
 /* Styles mobile y tablet */
 
