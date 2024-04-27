@@ -379,3 +379,50 @@
 
   }
 }
+
+.footer{ 
+  background-color: #9f3647;
+  color: #ffffff;
+  height: 15vh;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+      .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 1.5rem;
+    
+          .listaNav{
+            list-style: none;
+            display: flex;
+            align-items: center;
+          
+          .listaItem{
+            margin-right: 25px;
+            
+            .linkNav{
+              color:#ffffff;
+              text-decoration: none;
+              font-weight: 700;
+              font-size: 1.2rem;
+              padding: 0.5rem 1rem;
+
+            }
+
+            .linkNav.AdministradorPeliculas{
+              background-color: #181419;
+              color: white;
+              border-radius: 5px;
+            }
+            }
+          }
+          }
+
+
+
+        }
+
