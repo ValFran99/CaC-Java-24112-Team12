@@ -43,11 +43,11 @@
     <nav class="navegacion">
       <a href="#" class="anclaLogo">
         <i class="fas fa-film" aria-hidden="true"></i>
-        <span>Homepage</span>
+        <span>CaC Movies</span>
       </a>
       <ul class="listaNav">
         <li class="listaItem">
-          <a href="#" class="linkNav">Tendencias</a>
+          <a href="#tendencias" class="linkNav">Tendencias</a>
         </li>
         <li class="listaItem">
           <a href="#" class="linkNav">Registrarse</a>
@@ -58,7 +58,7 @@
       </ul>
     </nav>
   </header>
-  <main class="main">
+  <main class="main" id="main">
     <section class="landingSection">
       <h1 class="tituloPrincipal">Películas y series ilimitadas en un solo lugar</h1>
       <h2 class="tituloSecundario">Disfruta donde quieras. <br> Cancela en cualquier momento.</h2>
@@ -79,7 +79,7 @@
 
     <!-- ####################### Tendencias ############################## -->
 
-    <section class="sectionTendencias">
+    <section class="sectionTendencias" id="tendencias">
       <h2 class="tituloTendencias">Las tendencias de hoy</h2>
       <div class="peliculasContainer">
         <!-- Debería ser flex -->
@@ -87,7 +87,7 @@
           <a href="" class="peliculaLink">
             <div>
               <img src="./assets/peli_1.jpg" alt="" class="peliculaImg">
-              <h5 class="tituloPelicula">Titulo placeholder que hago largo porque si</h5>
+              <h5 class="tituloPelicula">The Beekeper</h5>
             </div>
           </a>
         </div>
@@ -254,7 +254,7 @@
     <hr class="separador">
 
 
-    <section class="aclamadas">
+    <section class="sectionAclamadas">
       <h2 class="tituloAclamadas">Las más aclamadas</h2>
       <div class="aclamadasContainer">
         <!-- tmb flex pero en filas sin wrap -->
@@ -373,8 +373,10 @@
           <a href="" class="linkNav AdministradorPeliculas">Administrador Películas</a>
         </li>
       </ul>
-    <img src="./assets/flecha-hacia-arriba.png">
     </nav>
+    <a href="#main" class="backToTopLink">
+      <img src="./assets/flecha-hacia-arriba.png">
+    </a>
   </footer>
 </body>
 </html>

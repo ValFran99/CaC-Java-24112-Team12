@@ -102,9 +102,9 @@
   background-color: #181419;
   color: white;
 
-  section{
+  /* section{
     border: 1px solid black;
-  }
+  } */
 
 
   /* ###################### SECCION LANDING ########################## */
@@ -229,6 +229,8 @@
     
   }
   
+  /* ########################### TENDENCIAS ################################## */
+
   .sectionTendencias{
     display: flex;
     height: 350vh;
@@ -246,29 +248,33 @@
       display: flex;
       height: 310vh;
       width: 80vw;
-      border: 1px solid white;
-      justify-content: space-evenly;
+      /* border: 1px solid white; */
+      justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 50px;
+      gap: 60px;
 
       .pelicula{
-        border: 50px solid white;
-        height: 45vh;
-        width: 15vw;
+        /* border: 50px solid white; */
+        height: 300px;
+        width: 200px;
         transition: transform 1s ease-in-out, box-shadow 0.3s ease-in-out;
         border: 1px solid #181419;
         border-radius: 10px;
 
         .tituloPelicula{
-          font-size: 1.2rem;
           color: white;
           text-align: center;
           opacity: 0;
           position: relative;
           top: -180px;
           left: 27px;
+
+          font-size: 1.5rem;
           font-family: "Nunito", sans-serif;
+          font-weight: bold;
           transition: opacity 0.4s ease-in;
+
           /* border: 1px solid white; */
           width: 75%;
           /* position: absolute;
@@ -342,7 +348,9 @@
     }
   }
 
-  .aclamadas{
+  /* ######################## ACLAMADAS ########################################### */
+
+  .sectionAclamadas{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -357,8 +365,8 @@
 
     .aclamadasContainer{
       width: 80vw;
-      height: 60vh;
-      border: 1px solid white;
+      height: 50vh;
+      /* border: 1px solid white; */
       display: flex;
       flex-wrap: nowrap;
       overflow-x: visible;
@@ -367,8 +375,8 @@
       align-items: center;
 
       .peliAclamada{
-        width: 13vw;
-        height: 40vh;
+        width: 170px;
+        height: 270px;
         /* border: 3px solid white; */
         /* margin-left: 30px;
         margin-top: 6%; */
@@ -390,8 +398,114 @@
 
 }
 
+/* ####### SEPARADOR ######### */
 
-/* Styles mobile y tablet */
+.separador{
+  /* display: inline-block; */
+  border: 1px solid #9f3647;
+  border-radius: 7px;
+  width: 80vw;
+  /* height: 4px; */
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 100%;
+}
+
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #9f3647 #1a161b;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a161b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #9f3647;
+  /* border-radius: 10px; */
+  /* border: 3px solid #000000; */
+}  
+*::-webkit-scrollbar-button {
+  background-size: 100%;
+  height: 10px;
+  width: 10px;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+}  
+
+/* ####################### FOOTER ##################################### */
+
+.footer{ 
+  background-color: #9f3647;
+  color: #ffffff;
+  height: 15vh;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 0;
+  z-index: 10;
+
+  .navegacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-left: 30px;
+    margin-right: 40px; */
+    padding: 1.5rem;
+    /* border: 1px solid white; */
+
+      .listaNav{
+        list-style: none;
+        display: flex;
+        align-items: center;
+      
+        .listaItem{
+          /* margin-right: 25px; */
+        
+          .linkNav{
+            color:#ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            /* padding: 0.5rem 1rem; */
+            /* border: 1px solid white; */
+            margin-right: 15px;
+
+          }
+
+          .linkNav.AdministradorPeliculas{
+            background-color: #181419;
+            color: white;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+          }
+        }
+
+      }
+  
+  }
+
+  .backToTopLink{
+    position: fixed;
+    bottom: 3vh;
+    right: 2vw;
+  }
+
+
+
+}
+
+
+/* ############################ RESPONSIVE STUFF ###############################*/
 
 @media (max-width: 768px){
   .header{
@@ -410,7 +524,7 @@
       .anclaLogo{
         font-weight: 700;
         font-size: 1.2rem;
-      }
+      }  
 
       .listaNav{
         padding: initial;
@@ -421,57 +535,11 @@
             margin-right: initial;
             font-size: 1rem;
             padding: 0.2rem;
-          }
-        }
-      }
-    }
+          }  
+        }  
+      }  
+    }  
 
-  }
-}
-
-.footer{ 
-  background-color: #9f3647;
-  color: #ffffff;
-  height: 15vh;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-
-      .navegacion{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 40px;
-        margin-right: 40px;
-        padding: 1.5rem;
-    
-          .listaNav{
-            list-style: none;
-            display: flex;
-            align-items: center;
-          
-          .listaItem{
-            margin-right: 25px;
-            
-            .linkNav{
-              color:#ffffff;
-              text-decoration: none;
-              font-weight: 700;
-              font-size: 1.2rem;
-              padding: 0.5rem 1rem;
-
-            }
-
-            .linkNav.AdministradorPeliculas{
-              background-color: #181419;
-              color: white;
-              border-radius: 5px;
-            }
-            }
-          }
-          }
-
-
-
-        }
+  }  
+}  
 
