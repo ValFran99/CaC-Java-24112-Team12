@@ -6,10 +6,14 @@
   /* border: 1px solid black; */
 }
 
+body{
+  background-image: url(../assets/banner_cinema.jpg);
+  background-size: cover;
+}
+
 .header{
 
   /* Con anidación para organizar todo mucho mejor */
-  background-color: #9f3647;
   color: #ffffff;
   height: 10vh;
   /* Así se mantiene "pegado" al tope de la página, con fixed se desliga del flujo de la página y se complica el uso de la imagen de fondo */
@@ -40,51 +44,14 @@
       animation: heartBeat 1s;
     }
 
-    .listaNav{
-      list-style: none;
-      display: flex;
-      align-items: center;
-
-      .listaItem{
-        margin-right: 20px;
-
-        .linkNav{
-          color: #ffffff;
-          text-decoration: none;
-          font-weight: 700;
-          font-size: 1.1rem;
-          padding: 0.5rem 1rem;
-
-          /* para que haya un pequeño delay cuando aparecen esas transformaciones */
-          transition: transform 0.3s, box-shadow 0.3s;
-
-          /* & se refiere a la misma clase donde está parado*/
-          &:hover{
-            /* el elemento se achica un poco al pasarle por arriba con el mouse */
-            transform: scale(0.95);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-          }
-
-        }
-
-        .linkNav.iniciarSesion{
-          background-color: #181419;
-          color: white;
-          border-radius: 5px;
-
-          transition: transform 0.3s, box-shadow 0.3s;
-          &:hover{
-            background-color: #9f3647;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-          }
-
-        }
-
-      }
-
-    }
-
   }
 
+}
+
+.sectionRegistrarse{
+  background-color: #181419;
+  border: 1px solid white;
+  display: block;
+  width: 40vw;
+  height: 75vh;
 }
