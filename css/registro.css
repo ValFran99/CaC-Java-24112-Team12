@@ -138,3 +138,11 @@ main{
   display: flex;
   justify-content: center;
 }
+
+/* ############################ RESPONSIVE STUFF ###############################*/
+
+@media(max-width: 1200px){
+  .sectionRegistrarse{
+    width: 95vw;
+  }
+}
