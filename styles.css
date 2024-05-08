@@ -139,8 +139,8 @@
 
     .registerLink{
       color: #ffffff;
-      height: 9vh;
-      width: 11vw;
+      height: 60px;
+      width: 160px;
       vertical-align: center;
       text-decoration: none;
       font-weight: 700;
@@ -186,9 +186,10 @@
     }
 
     .form{
-      width: 50vw;
+      width: 100vw;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      /* border: 1px solid white; */
 
 
       .textoBuscador, .botonBuscador{
@@ -201,12 +202,13 @@
       }
 
       .textoBuscador{
-        width: 70%;
+        width: 500px;
         text-indent: 15px;
+        margin-right: 10px;
       }
 
       .botonBuscador{
-        width: 25%;
+        width: 100px;
         text-align: center;
         background-color: #9f3647;
         color: white;
@@ -233,7 +235,7 @@
 
   .sectionTendencias{
     display: flex;
-    height: 350vh;
+    height: fit-content;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -246,7 +248,7 @@
 
     .peliculasContainer{
       display: flex;
-      height: 310vh;
+      height: fit-content;
       width: 80vw;
       /* border: 1px solid white; */
       justify-content: center;
@@ -319,7 +321,11 @@
 
     .botonesAntSig{
       /* border: 1px solid white; */
-      width: 30vw;
+      width: 100vw;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+      display: flex;
+      justify-content: center;
     }
 
     .botonAnterior, .botonSiguiente{
@@ -332,7 +338,7 @@
       margin-left: 3vw;
       border-radius: 5px;
 
-      width: 10vw;
+      width: 135px;
       height: 6vh;
 
       /* para que haya un pequeño delay cuando aparecen esas transformaciones */
@@ -454,7 +460,7 @@
   top: 0;
   z-index: 10;
 
-  .navegacion{
+  .navegacionFooter{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -475,7 +481,7 @@
             color:#ffffff;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1rem;
             /* padding: 0.5rem 1rem; */
             /* border: 1px solid white; */
             margin-right: 15px;
@@ -540,6 +546,81 @@
       }  
     }  
 
-  }  
-}  
+  } 
+   /* ################## MAIN ############################  */
+  .main{
+    /* ############### LANDING SECTION ##################### */
+    .landingSection{
+      height: 400px;
+
+      .tituloPrincipal{
+        font-size: 2.3rem;
+        margin-bottom: 30px;
+      }
+      .tituloSecundario{
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+      .registerLink{
+        height: 50px;
+        width: 140px;
+      }
+    }
+
+    /* ####################### SECCION BUSCADOR ########################## */
+
+    .buscadorSection{
+      .tituloBuscador{
+        font-size: 1.7rem;
+      }
+      .form{
+        .textoBuscador{
+          width: 300px;
+        }
+        .botonBuscador{
+          width: 80px;
+          font-size: 1rem;
+        }
+      }
+
+    }
+
+    /* ################ TENDENCIAS ################### */
+
+    .sectionTendencias{
+      .tituloTendencias{
+        font-size: 2rem;
+      }
+    }
+
+    /* ################# ACLAMADAS ###################### */
+    .sectionAclamadas{
+      .tituloAclamadas{
+        font-size: 2rem;
+      }
+    }
+  }
+
+  /* ###################### FOOTER ###################### */
+
+  .footer{ 
+
+    height: 30vh;
+  
+    .navegacionFooter{
+
+      height: 100%;
+  
+        .listaNav{
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+        }
+    
+    }
+  }
+
+}
+ 
 
