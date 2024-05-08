@@ -49,9 +49,92 @@ body{
 }
 
 .sectionRegistrarse{
-  background-color: #181419;
-  border: 1px solid white;
-  display: block;
-  width: 40vw;
-  height: 75vh;
+  background-color: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  width: 30vw;
+  height: 87vh;
+  color: white;
+
+  .formRegistro{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid white; */
+    width: 75%;
+    height: 90%;
+
+
+    .tituloRegistrarse{
+      margin-top: 5px;
+      /* border: 1px solid white; */
+      margin-right: auto;
+      margin-left: 20px;
+      font-size: 1.5rem;
+    }
+
+    .inputDiv{
+      /* border: 1px solid white; */
+      width: 95%;
+      height: 5vh;
+      text-align: center;
+    }
+  
+    .inputBox{
+      display: inline-block;
+      padding-left: 20px;
+      background-color: #333333;
+      width: 90%;
+      height: 100%;
+      border: 2px solid #9f3647;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    #terminosDiv{
+      display: flex;
+      align-items: center;
+      margin-left: 3vw;
+      /* border: 1px solid white; */
+
+      .terminosText{
+        font-size: 0.8rem;
+        margin-left: 5px;
+        align-self: center;
+      }
+    }
+
+    .botonRegistrarse{
+      width: 90%;
+      height: 7vh;
+      text-align: center;
+      background-color: #9f3647;
+      color: white;
+      font-size: 1.2rem;
+      /* border: 2px solid white; */
+      /* border: none; */
+      border-radius: 5px;
+    }
+
+    .needHelpLink{
+      text-decoration: none;
+      color: #757875;
+      margin-right: auto;
+      margin-left: 2vw;
+    }
+
+  }
+
+
+}
+
+main{
+  display: flex;
+  justify-content: center;
 }
