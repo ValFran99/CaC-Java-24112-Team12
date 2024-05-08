@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", "sans-serif";
+  /* border: 1px solid black; */
+}
+
+body{
+  background-image: url(../assets/banner_cinema.jpg);
+  background-size: cover;
+}
+
+.header{
+
+  /* Con anidación para organizar todo mucho mejor */
+  color: #ffffff;
+  height: 10vh;
+  /* Así se mantiene "pegado" al tope de la página, con fixed se desliga del flujo de la página y se complica el uso de la imagen de fondo */
+  position: sticky;
+  top: 0;
+  /* Que el encabezado siempre se mantega por encima de los elementos de la página*/
+  z-index: 10;
+
+  /* aplicado al nav, a todo el contenedor */
+  .navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1.5rem 0;
+
+    /* para el boton con el logo */
+    .anclaLogo{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .anclaLogo:hover{
+      -webkit-animation: heartBeat 1s;
+      animation: heartBeat 1s;
+    }
+
+  }
+
+}
+
+.sectionInicioSesion{
+  background-color: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 30vw;
+  height: 87vh;
+  color: white;
+
+  .formInicioSesion{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+    width: 75%;
+    height: 90%;
+
+
+    .tituloInicioSesion{
+      margin-top: 5px;
+      /* border: 1px solid white; */
+      margin-right: auto;
+      margin-left: 20px;
+      font-size: 1.5rem;
+    }
+
+    .inputDiv{
+      /* border: 1px solid white; */
+      width: 95%;
+      height: 5vh;
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .inputBox{
+      display: inline-block;
+      padding-left: 20px;
+      background-color: #333333;
+      width: 90%;
+      height: 100%;
+      border: 2px solid #9f3647;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    .botonIniciarSesion{
+      width: 90%;
+      height: 7vh;
+      text-align: center;
+      background-color: #9f3647;
+      color: white;
+      font-size: 1.2rem;
+      /* border: 2px solid white; */
+      /* border: none; */
+      border-radius: 5px;
+    }
+
+    .linkInicioSesion{
+      text-decoration: none;
+      color: #757875;
+      margin-right: auto;
+      margin-left: 2vw;
+      margin-top: 20px;
+    }
+
+  }
+
+
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+/* ############################ RESPONSIVE STUFF ###############################*/
+
+@media(max-width: 1200px){
+  .sectionInicioSesion{
+    width: 95vw;
+  }
+}
