@@ -34,6 +34,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaC - Movies</title>
@@ -67,7 +70,7 @@
 
     <!-- ###################### Buscador ####################### -->
 
-    <section class="buscadorSection animate__fadeInUp">
+    <section class="buscadorSection animate__fadeInUp" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
       <h2 class="tituloBuscador">¿Qué estas buscando para ver?</h2>
       <form action="" class="form">
         <input type="text" class="textoBuscador" placeholder="Buscar...">
@@ -79,7 +82,7 @@
 
     <!-- ####################### Tendencias ############################## -->
 
-    <section class="sectionTendencias" id="tendencias">
+    <section class="sectionTendencias" id="tendencias" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
       <h2 class="tituloTendencias">Las tendencias de hoy</h2>
       <div class="peliculasContainer">
         <!-- Debería ser flex -->
@@ -254,7 +257,7 @@
     <hr class="separador">
 
 
-    <section class="sectionAclamadas">
+    <section class="sectionAclamadas" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
       <h2 class="tituloAclamadas">Las más aclamadas</h2>
       <div class="aclamadasContainer">
         <!-- tmb flex pero en filas sin wrap -->
@@ -378,5 +381,12 @@
       <img src="./assets/flecha-hacia-arriba.png">
     </a>
   </footer>
+
+  <!-- Para las animaciones al scrollear -->
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
