@@ -38,23 +38,26 @@
 
   <main>
     <section class="sectionInicioSesion" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
-      <form action="" class="formInicioSesion">
+      <form action="" class="formInicioSesion" id="formInicioSesion" method="get">
         <div class="tituloInicioSesion">
           <h1>Iniciar Sesion</h1>
         </div>
         <div class="inputDiv">
-          <input type="email" class="inputBox" placeholder="Email">
+          <input type="email" class="inputBox" placeholder="Email" id="email">
+          <div class="errorText"></div>
         </div>
         <div class="inputDiv">
-          <input type="password" class="inputBox" placeholder="Contraseña">
+          <input type="password" class="inputBox" placeholder="Contraseña" id="password">
+          <div class="errorText"></div>
         </div>
         <div class="inputDiv">
-          <input type="button" class="botonIniciarSesion" value="Iniciar Sesión">
+          <input type="submit" class="botonIniciarSesion" value="Iniciar Sesión">
         </div>
         <a href="../paginas/registro.html" class="linkInicioSesion">Registrarse</a>
       </form>
     </section>
   </main>
+  <script src="../scripts/inicioSesion.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

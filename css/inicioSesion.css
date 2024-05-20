@@ -97,6 +97,17 @@ body{
       color: white;
     }
 
+    .inputBoxError{
+      border: 2px solid #eb0909;
+    }
+
+    .errorText{
+      color: red;
+      font-size: 0.8rem;
+      text-align: left;
+      margin-left: 20px;
+    }
+
     .botonIniciarSesion{
       width: 90%;
       height: 7vh;
