@@ -279,11 +279,14 @@ body{
 
           /* border: 1px solid white; */
           width: 75%;
-          /* position: absolute;
-          top: 20vh;
-          left: 3vw;
-          z-index: 1; */
-          /* display: none; */
+
+          /* -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black; */
+          text-shadow:
+            1px 1px 0 #000,
+            -1px 1px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000;
         }
 
         &:hover img{
