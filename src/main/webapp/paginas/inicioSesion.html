@@ -38,16 +38,16 @@
 
   <main>
     <section class="sectionInicioSesion" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
-      <form action="" class="formInicioSesion" id="formInicioSesion" method="get">
+      <form action="../LoginServlet" class="formInicioSesion" id="formInicioSesion" method="post">
         <div class="tituloInicioSesion">
           <h1>Iniciar Sesion</h1>
         </div>
         <div class="inputDiv">
-          <input type="email" class="inputBox" placeholder="Email" id="email">
+          <input type="email" class="inputBox" placeholder="Email" id="email" name="email">
           <div class="errorText"></div>
         </div>
         <div class="inputDiv">
-          <input type="password" class="inputBox" placeholder="Contraseña" id="password">
+          <input type="password" class="inputBox" placeholder="Contraseña" id="password" name="password">
           <div class="errorText"></div>
         </div>
         <div class="inputDiv">

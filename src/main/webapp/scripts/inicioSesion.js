@@ -6,6 +6,7 @@ formulario.addEventListener("submit", evento => {
 
   if(validarFormulario()){
     console.log("Subiendo data...")
+    console.log(formulario)
     formulario.submit();
   } else{
     console.log("Faltan campos por completar...")

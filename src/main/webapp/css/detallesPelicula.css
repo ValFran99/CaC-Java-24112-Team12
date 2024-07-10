@@ -1,0 +1,222 @@
+/* Para quitar todo los estilos por defecto */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", "sans-serif";
+  /* border: 1px solid black; */
+}
+
+
+/* ######################### HEADER ############################# */
+
+.header{
+
+  /* Con anidación para organizar todo mucho mejor */
+  background-color: #9f3647;
+  color: #ffffff;
+  height: 10vh;
+  /* Así se mantiene "pegado" al tope de la página, con fixed se desliga del flujo de la página y se complica el uso de la imagen de fondo */
+  position: sticky;
+  top: 0;
+  /* Que el encabezado siempre se mantega por encima de los elementos de la página*/
+  z-index: 10;
+
+  /* aplicado al nav, a todo el contenedor */
+  .navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1.5rem 0;
+
+    /* para el boton con el logo */
+    .anclaLogo{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .anclaLogo:hover{
+      -webkit-animation: heartBeat 1s;
+      animation: heartBeat 1s;
+    }
+
+    .listaNav{
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      .listaItem{
+        margin-right: 20px;
+
+        .linkNav{
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1.1rem;
+          padding: 0.5rem 1rem;
+
+          /* para que haya un pequeño delay cuando aparecen esas transformaciones */
+          transition: transform 0.3s, box-shadow 0.3s;
+
+          /* & se refiere a la misma clase donde está parado*/
+          &:hover{
+            /* el elemento se achica un poco al pasarle por arriba con el mouse */
+            transform: scale(0.95);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+          }
+
+        }
+
+        .linkNav.iniciarSesion{
+          background-color: #181419;
+          color: white;
+          border-radius: 5px;
+
+          transition: transform 0.3s, box-shadow 0.3s;
+          &:hover{
+            background-color: #9f3647;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+/* ######################## MAIN ############################ */
+
+
+main{
+  border: 1px solid black;
+  height: 100vh;
+}
+
+/* ####################### FOOTER ##################################### */
+
+.footer{ 
+  background-color: #9f3647;
+  color: #ffffff;
+  height: 15vh;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 0;
+  z-index: 10;
+
+  .navegacionFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-left: 30px;
+    margin-right: 40px; */
+    padding: 1.5rem;
+    /* border: 1px solid white; */
+
+      .listaNav{
+        list-style: none;
+        display: flex;
+        align-items: center;
+      
+        .listaItem{
+          /* margin-right: 25px; */
+        
+          .linkNav{
+            color:#ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            /* padding: 0.5rem 1rem; */
+            /* border: 1px solid white; */
+            margin-right: 15px;
+
+          }
+
+          .linkNav.AdministradorPeliculas{
+            background-color: #181419;
+            color: white;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+          }
+        }
+
+      }
+  
+  }
+
+  .backToTopLink{
+    position: fixed;
+    bottom: 3vh;
+    right: 2vw;
+  }
+}
+
+/* ############################ RESPONSIVE STUFF ###############################*/
+
+@media (max-width: 768px){
+  .header{
+    /* cuando se cumple la condición del media vuelve a su altura original, 10vh en este caso */
+    height: initial;
+
+    display: flex;
+    justify-content: center;
+    
+    .navegacion{
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+      row-gap: 20px;
+
+      .anclaLogo{
+        font-weight: 700;
+        font-size: 1.2rem;
+      }  
+
+      .listaNav{
+        padding: initial;
+
+        .listaItem{
+          .linkNav{
+            font-weight: 400;
+            margin-right: initial;
+            font-size: 1rem;
+            padding: 0.2rem;
+          }  
+        }  
+      }  
+    }  
+
+  } 
+
+  /* ###################### FOOTER ###################### */
+
+  .footer{ 
+
+    height: 30vh;
+  
+    .navegacionFooter{
+
+      height: 100%;
+  
+        .listaNav{
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+        }
+    
+    }
+  }
+
+}
